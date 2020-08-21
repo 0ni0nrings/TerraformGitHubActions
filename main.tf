@@ -22,7 +22,7 @@ provider "aws" {
   version = "~> 2.36.0"
 }
 
-
+/*
 # Calling the statelock module/statelock
 module "statelock" {
   source                      = "./modules/statelock"
@@ -30,4 +30,4 @@ module "statelock" {
   dynamo_db_table_name        = var.dynamo_db_table_name
   iam_user_name               = var.iam_user_name
   }
-
+*/
