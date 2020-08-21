@@ -2,6 +2,8 @@
 # 
 ########################################################
 
+/*
+
 # Require TF version to be same as or greater than 0.12.13
 terraform {
   required_version = ">=0.12.13"
@@ -20,7 +22,7 @@ provider "aws" {
   version = "~> 2.36.0"
 }
 
-/*
+
 # Calling the statelock module/statelock
 module "statelock" {
   source                      = "./modules/statelock"
@@ -29,28 +31,3 @@ module "statelock" {
   iam_user_name               = var.iam_user_name
   }
 */
-
-resource "aws_vpc" "vpc" {
-  cidr_block           = "10.1.0.0/16"
-  instance_tenancy     = "default"
-  tags = {
-    Name      = "Vpc"
-    Terraform = "true"
-  }
-}
-# Build route table 1
-resource "aws_route_table" "route_table1" {
-  vpc_id = aws_vpc.vpc.id
-  tags = {
-    Name = "RouteTable1"
-    Terraform = "true"
-  }
-}
-# Build route table 2
-resource "aws_route_table" "route_table2" {
-  vpc_id = aws_vpc.vpc.id
-  tags = {
-    Name = "RouteTable2"
-    Terraform = "true"
-  }
-}
