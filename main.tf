@@ -2,7 +2,7 @@
 # 
 ########################################################
 
-/*
+
 
 # Require TF version to be same as or greater than 0.12.13
 terraform {
@@ -30,4 +30,4 @@ module "statelock" {
   dynamo_db_table_name        = var.dynamo_db_table_name
   iam_user_name               = var.iam_user_name
   }
-*/
+
