@@ -17,7 +17,7 @@ module "statelock" {
   iam_user_name               = "cloud_user"
   }
 
-
+/*
 # Require TF version to be same as or greater than 0.12.13
 terraform {
   required_version = ">=0.12.13"
@@ -29,3 +29,4 @@ terraform {
    encrypt        = true
   }
 }
+*/
