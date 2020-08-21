@@ -12,7 +12,7 @@ provider "aws" {
 # Calling the statelock module/statelock
 module "statelock" {
   source                      = "./modules/statelock"
-  name_of_s3_bucket           = "anewbucketforterraformstatelock"
+  s3_bucket_name           = "anewbucketforterraformstatelock"
   dynamo_db_table_name        = "anewddbforterraformstatelock"
   iam_user_name               = "cloud_user"
   }
